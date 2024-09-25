@@ -1,5 +1,7 @@
 Author: Zina Al Waidh
-Overview EDM is a front-end testing automation project using the Cucumber BDD framework and Selenium WebDriver. 
+
+Overview:
+EDM is a front-end testing automation project using the Cucumber BDD framework and Selenium WebDriver. 
 This Project is designed to automate tests for EDM with the purpose of creating comprehensive regression suite. As a QA tester, the goal is to enhance test coverage, improve test efficency, and ensure reliabity of the front-end of EDM.
 
 Before getting started, the following tools and softwares must be installed:
