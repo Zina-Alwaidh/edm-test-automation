@@ -11,7 +11,7 @@ Before getting started, the following tools and softwares must be installed:
 - Git: Version control system for managing the project
 
 Procedure: 
-- Copy code for cloning: https://github.com/Zina-Alwaidh/edm-test-automation/tree/main
+- Copy code for cloning: https://github.com/Zina-Alwaidh/edm-test-automation.git
 - Open project in IntelliJ IDEA
 - Install the required dependencies using Maven
 - Right-Click  on pom.xml file and select "Reimport" to make sure all dependencies are downloaded
