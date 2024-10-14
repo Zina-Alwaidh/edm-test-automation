@@ -10,6 +10,8 @@ import com.utlities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,10 +33,10 @@ loginPage.IDme.click();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
         loginPage.emailInput.click();
-        loginPage.emailInput.sendKeys("vets.gov.user+0@gmail.com");
+        loginPage.emailInput.sendKeys("vets.gov.user+34@gmail.com");
 
         loginPage.passwordInput.click();
-        loginPage.passwordInput.sendKeys("369SsNrLgPv5");
+        loginPage.passwordInput.sendKeys("303SsNrLgPv5");
         js.executeScript("window.scrollBy(0,250)");
         BrowserUtils.waitFor(3);
         loginPage.signInButton.click();
@@ -45,7 +47,7 @@ loginPage.IDme.click();
         js.executeScript("window.scrollBy(0,250)");
         BrowserUtils.waitFor(2);
         loginPage.continueButton.click();
-
+        BrowserUtils.waitFor(8);
 
 
 
@@ -57,11 +59,19 @@ loginPage.IDme.click();
         vaGOV.vaBenefitsAndHealthCare.click();
         vaGOV.educationAndTraining.click();
         vaGOV.checkPost911SOB.click();
-        BrowserUtils.waitFor(2);
-        js.executeScript("window.scrollBy(0,500)");
-        BrowserUtils.waitFor(4);
-        SOB.checkYourGIBillBenefits.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
+
+        String expectedTitle = "Check Post-9/11 GI Bill Statement of Benefits";
+        String  actualTitle = Driver.getDriver().findElement(By.xpath("//h1[.='Check Post-9/11 GI Bill Statement of Benefits']")).getText();
+        Assert.assertEquals(expectedTitle, actualTitle);
+
+
+
+//        BrowserUtils.waitFor(8);
+//        js.executeScript("window.scrollBy(0,500)");
+//        BrowserUtils.waitFor(10);
+//        SOB.checkYourGIBillBenefits.click();
+//        BrowserUtils.waitFor(10);
 
 
     }
