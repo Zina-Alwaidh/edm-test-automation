@@ -15,7 +15,8 @@ public SOB(){PageFactory.initElements(Driver.getDriver(), this);
     public static WebElement checkYourGIBillBenefits;
 @FindBy(xpath = "//h1[.='Check Post-9/11 GI Bill Statement of Benefits']")
     public static WebElement checkPost9GIBillBenefitsTitle;
-
+@FindBy(xpath = "//button[.='Get printable statement of benefits']")
+    public static WebElement getPrintableSOB;
 }
 
 
