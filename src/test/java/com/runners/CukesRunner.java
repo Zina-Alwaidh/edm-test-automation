@@ -26,7 +26,7 @@ outputFolder = "target") */
         features = "src/test/resources/features",
         glue = "com/step_definitions",
         dryRun = false,
-        tags = "@print"
+        tags = "@searchProgram"
 
 
 

@@ -53,7 +53,7 @@ public class sobHomePageStepDefinitions {
 
     @Then("user is able to see their statement of Benefits page")
     public void user_is_able_to_see_their_statement_of_benefits_page() {
-        vaGOV vaGoV = new vaGOV();
+        vaGOV vaGOV = new vaGOV();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         vaGOV.vaBenefitsAndHealthCare.click();
         vaGOV.educationAndTraining.click();
