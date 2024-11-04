@@ -50,7 +50,6 @@ public class giComparisonToolFontStepDefinitions {
         String expectedTitle = "NEW YORK STATE DEPARTMENT OF LABOR RENSSELAER COUNTY CAREER CENTER";
         String actualTitle = Driver.getDriver().findElement(By.xpath("//div//h1[.='NEW YORK STATE DEPARTMENT OF LABOR RENSSELAER COUNTY CAREER CENTER']")).getText();
 
-        String expectedResult = ""
 
         if(expectedTitle.equals(actualTitle)){
             System.out.println("Pass");
