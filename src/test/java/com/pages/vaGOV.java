@@ -18,4 +18,11 @@ public static WebElement vaBenefitsAndHealthCare;
 @FindBy(xpath = "//a[.='Check Post-9/11 GI Bill Statement of Benefits']")
     public static WebElement checkPost911SOB;
 
+@FindBy(xpath = "//button[.='Sign in']")
+    public static WebElement signInVA;
+@FindBy(xpath = "//span[@class='user-dropdown-email']")
+    public static WebElement profileName;
+@FindBy(xpath = "//a[.='Sign Out']")
+    public static WebElement signOut;
+
 }
