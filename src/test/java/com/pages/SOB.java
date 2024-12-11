@@ -14,10 +14,13 @@ public class SOB {
 
     @FindBy(xpath = "//a[.='Check your GI Bill Benefits']")
     public static WebElement checkYourGIBillBenefits;
+
     @FindBy(xpath = "//h1[.='Check Post-9/11 GI Bill Statement of Benefits']")
     public static WebElement checkPost9GIBillBenefitsTitle;
+
     @FindBy(xpath = "//div//a[.='Check your GI Bill Benefits']")
     public static WebElement greenArrowCheckYourGIBillBenefits;
+
     @FindBy(xpath = "//va-button[.]")
     public static WebElement getPrintableSOB;
     @FindBy(xpath = "//button[.='Print This Page']")

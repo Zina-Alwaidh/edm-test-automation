@@ -1,5 +1,6 @@
 package com.step_definitions.SOB;
 
+import com.pages.SOB;
 import com.pages.loginPage;
 import com.pages.vaGOV;
 import com.utlities.BrowserUtils;
@@ -29,13 +30,7 @@ public class mockUsersStepDefinition {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         loginPage loginPage = new loginPage();
         vaGOV vaGOV = new vaGOV();
-        vaGOV.signInVA.click();
-        loginPage.IDme.click();
-    }
 
-    @When("mock user signs in to staging environment statement of benefits")
-    public void mock_user_signs_in_to_staging_environment_statement_of_benefits() {
-        loginPage loginPage = new loginPage();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         String filePath = "src/test/resources/mockusers.csv";
         mUserCredentials = CSVReader.readCSV(filePath);
@@ -43,7 +38,8 @@ public class mockUsersStepDefinition {
         for (Map<String, String> user : mUserCredentials) {
             String username = user.get("username");
             String password = user.get("password");
-
+            vaGOV.signInVA.click();
+            loginPage.IDme.click();
             loginPage.emailInput.click();
             loginPage.emailInput.sendKeys(username);
             loginPage.passwordInput.click();
@@ -57,27 +53,28 @@ public class mockUsersStepDefinition {
             js.executeScript("window.scrollBy(0,1500)");
             BrowserUtils.waitFor(2);
             loginPage.continueButton.click();
-            BrowserUtils.waitFor(8);
+            SOB SOB = new SOB();
+            BrowserUtils.waitFor(18);
+            vaGOV.vaBenefitsAndHealthCare.click();
+            vaGOV.educationAndTraining.click();
+            SOB.checkYourGIBillBenefits.click();
+            BrowserUtils.waitFor(5);
+            js.executeScript("window.scrollBy(0,250)");
+            SOB.greenArrowCheckYourGIBillBenefits.click();
+            BrowserUtils.waitFor(3);
 
             vaGOV.profileName.click();
             vaGOV.signOut.click();
 
         }
-//        loginPage.emailInput.click();
+
+
+    }
+
+    @When("mock user signs in to staging environment statement of benefits")
+    public void mock_user_signs_in_to_staging_environment_statement_of_benefits() {
+
 //
-//        loginPage.passwordInput.click();
-//        loginPage.passwordInput.sendKeys("303SsNrLgPv5");
-//        js.executeScript("window.scrollBy(0,250)");
-//        BrowserUtils.waitFor(3);
-//        loginPage.signInButton.click();
-//        js.executeScript("window.scrollBy(0,250)");
-//        BrowserUtils.waitFor(3);
-//        js.executeScript("window.scrollBy(0,250)");
-//        loginPage.continueButton.click();
-//        js.executeScript("window.scrollBy(0,250)");
-//        BrowserUtils.waitFor(2);
-//        loginPage.continueButton.click();
-//        BrowserUtils.waitFor(8);
 
 
     }

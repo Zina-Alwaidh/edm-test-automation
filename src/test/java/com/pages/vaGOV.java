@@ -20,8 +20,10 @@ public static WebElement vaBenefitsAndHealthCare;
 
 @FindBy(xpath = "//button[.='Sign in']")
     public static WebElement signInVA;
+
 @FindBy(xpath = "//span[@class='user-dropdown-email']")
     public static WebElement profileName;
+
 @FindBy(xpath = "//a[.='Sign Out']")
     public static WebElement signOut;
 
