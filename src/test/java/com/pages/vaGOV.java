@@ -15,8 +15,8 @@ public static WebElement vaBenefitsAndHealthCare;
 @FindBy(xpath = "//button[.='Education and training']")
     public static WebElement educationAndTraining;
 
-@FindBy(xpath = "//a[.='Check Post-9/11 GI Bill Statement of Benefits']")
-    public static WebElement checkPost911SOB;
+@FindBy(xpath = "//a[.='Check your remaining Post-9/11 GI Bill benefits']")
+    public static WebElement checkRemainingPost911SOB;
 
 @FindBy(xpath = "//button[.='Sign in']")
     public static WebElement signInVA;

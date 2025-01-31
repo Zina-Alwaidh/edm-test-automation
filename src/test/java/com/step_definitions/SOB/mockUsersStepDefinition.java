@@ -10,6 +10,8 @@ import com.utlities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -57,11 +59,10 @@ public class mockUsersStepDefinition {
             BrowserUtils.waitFor(18);
             vaGOV.vaBenefitsAndHealthCare.click();
             vaGOV.educationAndTraining.click();
-            SOB.checkYourGIBillBenefits.click();
-            BrowserUtils.waitFor(5);
-            js.executeScript("window.scrollBy(0,250)");
-            SOB.greenArrowCheckYourGIBillBenefits.click();
-            BrowserUtils.waitFor(3);
+            vaGOV.checkRemainingPost911SOB.click();
+
+
+
 
             vaGOV.profileName.click();
             vaGOV.signOut.click();

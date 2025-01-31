@@ -57,7 +57,7 @@ public class sobHomePageStepDefinitions {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         vaGOV.vaBenefitsAndHealthCare.click();
         vaGOV.educationAndTraining.click();
-        vaGOV.checkPost911SOB.click();
+        vaGOV.checkRemainingPost911SOB.click();
         BrowserUtils.waitFor(5);
 
         String expectedTitle = "Check Post-9/11 GI Bill Statement of Benefits";
